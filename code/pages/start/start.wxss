@@ -1,0 +1,11 @@
+.background-page {
+  height: 100vh;
+  display: flex;
+}
+
+.background-image {
+  height: 100%;
+  width: 100%;
+  /* margin: 20rpx;
+  border-radius: 50%; */
+}

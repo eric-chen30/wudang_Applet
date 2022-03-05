@@ -1,0 +1,85 @@
+/* pages/threeTest/threeTest.wxss */
+.container{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: -9999;
+}
+
+.up-box{
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+}
+
+.up-images{
+  width: 100%;
+  height: 40vh;
+}
+
+.up-images image{
+  width: 100%;
+  height: 40vh;
+}
+
+.up-text{
+  display: flex;
+  height: 9vh;
+  background: white;
+  align-items: center;
+  /*为边框加阴影*/
+  border-style: solid;
+  box-shadow:0px 2px 4px 2px #DDDDDD;
+  border-width: 0rpx;
+}
+
+
+.gray-box{
+  height: 3vh;
+  background: whitesmoke;
+}
+
+.down-text{
+  display: flex;
+  height: 9.5vh;
+  background: white;
+  align-items: center;
+  /*为边框加阴影*/
+  border-style: solid;
+  box-shadow:0px 2px 4px 2px #DDDDDD;
+  border-width: 0rpx;
+}
+
+.part-one{
+  flex: 1;
+}
+
+.part-one image {
+  height: 7vh;
+  width: 7vh;
+  padding: 0;
+  margin: 16rpx;
+}
+
+.part-two{
+  flex: 6;
+  color: #3B3B3B;
+  font-size: 36rpx;
+
+}
+
+.part-two :nth-child(1){
+  margin: 30rpx;
+}
+
+.part-two :nth-child(3){
+  margin: 30rpx;
+  color: #AAAAAA;
+  font-size: 30rpx;
+  font-weight: lighter;
+}
+
+.part-three{
+  flex: 1;
+}

@@ -1,0 +1,57 @@
+/* pages/twice/twice.wxss */
+
+.container{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.background-img{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: -9999;
+}
+.background-img image{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.help-rank{
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: cadetblue; */
+  z-index: 1;
+  top: 30vh;
+  opacity: 0.5;
+}
+
+.help-view{
+  height: 5vh;
+  width: 14vh;
+  background-color: #ffffff;
+  margin-left: 2vh;
+  border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.rank-view{
+  height: 5vh;
+  width: 14vh;
+  background-color: #ffffff;
+  margin-right: 2vh;
+  border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

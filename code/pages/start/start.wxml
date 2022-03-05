@@ -1,0 +1,9 @@
+<view class="background-page">
+
+  <view class="background-image">
+    <image class="background-image" src="{{images.startPicture}}" mode="scaleToFill"></image>
+  </view>
+  <view >
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+  </view>
+</view>

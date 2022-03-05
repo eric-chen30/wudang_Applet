@@ -1,0 +1,18 @@
+<!--pages/twice/twice.wxml-->
+
+<!--背景图 + 香炉和石柱 + 香和烟 + 好友助力值（包含数字）-->
+<view class="container">
+  <view class="background-img">
+  <image src='../secondComing/images/1.jpg'></image>
+  </view>
+  <!--助力值 + 排行榜-->
+  <view class="help-rank">
+    <view class="help-view">
+      <text>助力值：</text>
+      <text>{{value}}</text>
+    </view>
+    <view class="rank-view">
+      <view bindtap="goToRankPage">排行榜</view>
+    </view>
+  </view>
+</view>

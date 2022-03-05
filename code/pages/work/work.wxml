@@ -1,0 +1,89 @@
+
+<scroll-view class="background-page" scroll-y="{{scrollAndClick}}" style="background-image: url({{images.background}}); height: 100%;" bindscrolltolower="lower" scroll-with-animation="{{true}}">
+  <view class="box-empty"></view>
+  <view class="box-head" wx:if="{{!toShare}}">
+    <image class="box-head-img" src="{{images.firstIncense}}" animation="{{firstIncense}}"/>
+    <!-- <button wx:if="{{!scrollAndClick}}" class="longClickBtn" loading="{{loading}}" bindtap="handleClick" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" >
+      长按放大香炉
+    </button> -->
+    <!-- <image wx:if="{{showPoetry}}" class="box-head-poetry" src="{{images.verse}}" animation="{{poetryOpacityAnimation}}"/> -->
+  </view>
+  <view wx:if="{{toShare}}" class="toShare" animation="{{toShowPoetry}}">分享出去让大家为你愿望助力！</view>
+  <view class="content">
+    <!-- <view class="to-center" wx:if="{{scrollAndClick}}">向下滑动拉进香炉</view>
+    <view class="to-center" wx:if="{{bigIncenseToFriction && !showPoetry}}">摩擦屏幕点亮香</view>
+    <view wx:if="{{!scrollAndClick && !bigIncenseToFriction}}" class="enlargeIncense to-center" style="margin-top: 10px;" animation="{{longClickShow}}">
+      长按香炉放大
+    </view> -->
+
+    <view class="to-center slideIncense" animation="{{toSlideIncense}}">向下滑动拉进香炉</view>
+    <view class="to-center enlargeIncense" animation="{{longClickShow}}">长按香炉放大</view>
+    <!-- <view class="to-center shangXiang"  animation="{{toShangXiang}}" bindtap="clickHereToIncense">点击此处上香</view> -->
+    <view class="to-center shangXiang" animation="{{toShangXiang}}" bindtap="clickHereToIncense" style="z-index: {{ clickIncense? '41':'' }}">点击此处上香</view>
+    <view class="to-center frictionIncense" animation="{{toFrictionIncense}}">摩擦屏幕点亮香</view>
+
+
+    <view wx:if="{{longClick}}" class="enlargeIncenseBurner">
+      <view class="longClickEnlargeBtn" bindlongpress="handleLongPress"></view>
+    </view>
+    <view wx:if="{{!longClick && !showPoetry && alreadyClick}}" class="frictionIncenseFire">
+      <view class="frictionIncenseFireBtn" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></view>
+    </view>
+    <view wx:if="{{showPoetry}}" class="showPoetry">
+      <image class="showPoetryImage" src="{{images.poetry}}" animation="{{poetryOpacityAnimation}}" mode="aspectFit" />
+    </view>
+  </view>
+  <!-- <view class="incense">
+    <view wx:if="{{bigIncenseToFriction}}" class="incenseAndFlame" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="opacity: {{incenseAndFlameOpacity}};">
+      <image src="{{images.incenseBurnerAndIncenseAndFlame}}" animation="{{enlargeOrNarrow}}" mode="aspectFit"/>
+    </view>
+    <view wx:if="{{threeSecondNarrow}}" class="incenseAndBurner">
+      <image src="{{images.incenseBurnerAndIncense}}" animation="{{enlargeOrNarrow}}" mode="aspectFit"/>
+    </view>
+    <view class="stone2">
+      <image src="{{images.stone2}}" animation="{{enlargeOrNarrowAndTran}}" mode="aspectFit"/>
+    </view>
+    
+  </view> -->
+  
+  <view class="incense">
+    <!-- <view wx:if="{{bigIncenseToFriction}}" class="incenseAndFlame" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="opacity: {{incenseAndFlameOpacity}};" animation="{{enlargeOrNarrow}}">
+      <image src="{{images.incenseBurnerAndIncenseAndFlame}}" mode="aspectFit"/>
+    </view>
+    <view wx:if="{{threeSecondNarrow}}" class="incenseAndBurner" animation="{{enlargeOrNarrow}}">
+      <image src="{{images.incenseBurnerAndIncense}}" mode="aspectFit"/>
+    </view>
+    <view class="stone2" animation="{{enlargeOrNarrowAndTran}}">
+      <image src="{{images.stone2}}" mode="aspectFit"/>
+    </view> -->
+
+    <!-- <view class="incenseBurnerStone">
+      <view class="incenseBurnerStoneEmp"></view>
+      <view class="incenseBurnerStonePic">
+        <image src="{{images.incenseBurnerStone}}" animation="{{enlargeOrNarrowAndTran}}" mode="aspectFit"/>
+      </view>
+    </view> -->
+
+
+    <view class="incenseBurnerStone">
+      <image src="{{images.incenseBurnerStone}}" mode="aspectFit"  animation="{{incenseBurnerStone}}" />
+    </view>
+    <view class="stoneIncense">
+      <image src="{{images.incense}}" mode="aspectFit" animation="{{stoneIncense}}"/>
+    </view>
+    <view class="incenseFire">
+      <image src="{{images.incenseFire}}" mode="aspectFit" animation="{{incenseFire}}" style="opacity: {{incenseAndFlameOpacity}};"/>
+    </view>
+    <view class="incenseSmoke">
+      <image src="{{images.incenseSmoke}}" mode="aspectFit" animation="{{incenseSmoke}}"/>
+    </view>
+  </view>
+  
+  <!-- <view class="box-img">
+    <image bindtap="toWorkPage" class="background-image" src="{{images.backgroundSrc}}" mode="widthFill"></image>
+  </view> -->
+</scroll-view>
+
+<!-- <view class="background-page">
+  <image bindtap="toWorkPage" class="background-image" src="{{images[0].backgroundSrc}}" mode="widthFill"></image>
+</view> -->

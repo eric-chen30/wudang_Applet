@@ -1,0 +1,47 @@
+<!--pages/threeTest/threeTest.wxml-->
+
+<!--类微信运动排行榜-->
+<view class="container">
+  <!--第一部分:图片以及自己的排名-->
+  <view class="up-box">
+    <!--图片展示-->
+    <view class="up-images">
+      <image src="../rankingList/images/1.png" mode="aspectFill"></image>
+    </view>
+    <!--自己的排名-->
+    <view class="up-text">
+        <view class="part-one"> 
+          <image src="../rankingList/images/1.png"></image>
+        </view>
+        <view class="part-two">
+          <text>{{UserName}}</text>
+          <text>\n</text>
+          <text>助力值：{{UserValue}}</text>
+        </view>
+        <view class="part-three">
+          <text>{{UserRank}}</text>
+        </view>
+    </view>
+    <!--过渡灰色框-->
+    <view class="gray-box"></view>
+    <!--第二部分：可滚动的完整排行榜-->
+  <scroll-view scroll-y="true" style="height: 48vh;">
+      <!--block用于外层数据的循环遍历-->
+    <block wx:for="{{Results}}" wx:for-index="index" wx:for-item="item">
+      <view class="down-text">
+        <view class="part-one"> 
+          <image src="{{item.pic}}"></image>
+        </view>
+        <view class="part-two">
+          <text>{{item.nickname}}</text>
+          <text>\n</text>
+          <text>助力值：{{item.value}}</text>
+        </view>
+        <view class="part-three">
+          <text>{{index +1}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  </view>
+</view>

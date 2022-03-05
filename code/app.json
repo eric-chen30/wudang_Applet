@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/work/work",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/secondComing/secondComing",
+    "pages/rankingList/rankingList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "在武当",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
